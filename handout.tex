@@ -1,0 +1,280 @@
+\documentclass[a4paper,12pt]{ltjsarticle}
+\usepackage[top=25truemm,bottom=17truemm,left=11truemm,right=11truemm]{geometry}
+\usepackage[version=4]{mhchem}
+\usepackage{color}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{randomshuffle}
+\usepackage{paralist}
+
+\usepackage{luatexja-otf}
+\usepackage[no-math]{luatexja-fontspec}
+\setmainjfont[BoldFont=HiraMinProN-W6]{HiraMinProN-W3}
+\setsansjfont[BoldFont=HiraginoSans-W6]{HiraginoSans-W3}
+\setsansfont{Helvetica}
+\newfontfamily{\rfamily}[Renderer=Basic, Ligatures=TeX]{SFProRounded-Regular}
+
+\makeatletter
+
+\newcount\problemAnum
+\newcount\problemBnum
+
+\def\addProblemA#1#2{%
+  \advance\problemAnum\@ne
+  \@namedef{problemA\the\problemAnum}{#1}%
+  \@namedef{answerA\the\problemAnum}{#2}%
+}
+\def\addProblemB#1#2{%
+  \advance\problemBnum\@ne
+  \@namedef{problemB\the\problemBnum}{#1}%
+  \@namedef{answerB\the\problemBnum}{#2}%
+}
+
+\def\printProblemA#1{\@nameuse{problemA\shuffled{#1}}}
+\def\printAnswerA#1{\@nameuse{answerA\shuffled{#1}}}
+\def\printProblemB#1{\@nameuse{problemB\shuffled{#1}}}
+\def\printAnswerB#1{\@nameuse{answerB\shuffled{#1}}}
+
+\makeatother
+
+
+\newcommand{\subject}{科目名}
+
+\columnseprule=0.2mm
+
+\pagestyle{fancy}
+\rhead{名前:\hspace{5cm} 得点:\hspace{15mm}/12}
+\cfoot{\sffamily パターン\thepage}
+
+\addProblemA{★★★★☆　肩甲舌骨筋を支配する神経を答えよ。}{頸神経ワナ}
+\addProblemA{★★☆☆☆　三角筋を支配する神経を答えよ。}{腋窩神経}
+\addProblemA{★★★☆☆　胸鎖乳突筋を支配する神経を答えよ。}{副神経、頸神経叢}
+\addProblemA{★★★★☆　前脛骨筋を支配する神経を答えよ。}{深腓骨神経}
+\addProblemA{★★★☆☆　尺側手根伸筋を支配する神経を答えよ。}{橈骨神経}
+\addProblemA{★★☆☆☆　腕橈骨筋を支配する神経を答えよ。}{橈骨神経}
+\addProblemA{★★☆☆☆　上腕筋を支配する神経を答えよ。}{筋皮神経}
+\addProblemA{★★★★★　ヒラメ筋を支配する神経を答えよ。}{脛骨神経}
+\addProblemA{★★★☆☆　大殿筋を支配する神経を答えよ。}{下殿神経}
+\addProblemA{★★★☆☆　腹横筋を支配する神経を答えよ。}{肋間神経}
+\addProblemA{★★★☆☆　前頭筋を支配する神経を答えよ。}{顔面神経}
+\addProblemA{★★★★☆　小殿筋を支配する神経を答えよ。}{上殿神経}
+\addProblemA{★★★☆☆　小円筋を支配する神経を答えよ。}{腋窩神経}
+\addProblemA{★★★☆☆　尺側手根屈筋を支配する神経を答えよ。}{尺骨神経}
+\addProblemA{★★★☆☆　最内肋間筋を支配する神経を答えよ。}{肋間神経}
+\addProblemA{★★★☆☆　棘下筋を支配する神経を答えよ。}{肩甲上神経}
+\addProblemA{★★★☆☆　縫工筋を支配する神経を答えよ。}{大腿神経}
+\addProblemA{★★★★★　烏口腕筋を支配する神経を答えよ。}{筋皮神経}
+\addProblemA{★★★★☆　内腹斜筋を支配する神経を答えよ。}{肋間神経、肋下神経}
+\addProblemA{★★☆☆☆　長腓骨筋を支配する神経を答えよ。}{浅腓骨神経}
+\addProblemA{★☆☆☆☆　外腹斜筋を支配する神経を答えよ。}{肋間神経、肋下神経}
+\addProblemA{★★★☆☆　棘上筋を支配する神経を答えよ。}{肩甲上神経}
+\addProblemA{★★☆☆☆　回外筋を支配する神経を答えよ。}{橈骨神経}
+\addProblemA{★★☆☆☆　橈側手根屈筋を支配する神経を答えよ。}{正中神経}
+\addProblemA{★★★★☆　大腿四頭筋を支配する神経を答えよ。}{大腿神経}
+\addProblemA{★★☆☆☆　中殿筋を支配する神経を答えよ。}{上殿神経}
+\addProblemA{★★★☆☆　小胸筋を支配する神経を答えよ。}{内側・外側胸筋神経}
+\addProblemA{★★★★★　後脛骨筋を支配する神経を答えよ。}{脛骨神経}
+\addProblemA{★☆☆☆☆　後耳介筋を支配する神経を答えよ。}{顔面神経}
+\addProblemA{★★★★★　広頸筋を支配する神経を答えよ。}{顔面神経}
+\addProblemA{★★★☆☆　広背筋を支配する神経を答えよ。}{胸背神経}
+\addProblemA{★★☆☆☆　長掌筋を支配する神経を答えよ。}{正中神経}
+\addProblemA{★☆☆☆☆　外側直筋を支配する神経を答えよ。}{外転神経}
+\addProblemA{★★★☆☆　内側翼突筋を支配する神経を答えよ。}{下顎神経、内側翼突筋神経}
+\addProblemA{★★★★☆　(円)回内筋を支配する神経を答えよ。}{正中神経}
+\addProblemA{★★★★☆　浅指屈筋を支配する神経を答えよ。}{正中神経}
+\addProblemA{★☆☆☆☆　長母趾屈筋を支配する神経を答えよ。}{脛骨神経}
+\addProblemA{★☆☆☆☆　後頭筋を支配する神経を答えよ。}{顔面神経}
+\addProblemA{★★★★☆　眼輪筋を支配する神経を答えよ。}{顔面神経}
+\addProblemA{★☆☆☆☆　固有背筋を支配する神経を答えよ。}{脊髄神経後枝}
+\addProblemA{★★★☆☆　腹直筋を支配する神経を答えよ。}{肋間神経}
+\addProblemA{★★★★☆　大腿直筋を支配する神経を答えよ。}{大腿神経}
+\addProblemA{★★★★☆　大胸筋を支配する神経を答えよ。}{内側・外側胸筋神経}
+\addProblemA{★★☆☆☆　肩甲下筋を支配する神経を答えよ。}{肩甲下神経}
+\addProblemA{★★★☆☆　咬筋を支配する神経を答えよ。}{咬筋神経(下顎神経)}
+\addProblemA{★★★☆☆　短腓骨筋を支配する神経を答えよ。}{浅腓骨神経}
+\addProblemA{★★★★☆　上腕二頭筋を支配する神経を答えよ。}{筋皮神経}
+\addProblemA{★★★★☆　菱形筋を支配する神経を答えよ。}{肩甲背神経}
+\addProblemA{★★★☆☆　胸骨舌骨筋を支配する神経を答えよ。}{頸神経ワナ}
+\addProblemA{★★★☆☆　口輪筋を支配する神経を答えよ。}{顔面神経}
+\addProblemA{★★★☆☆　大円筋を支配する神経を答えよ。}{肩甲下神経}
+\addProblemA{★★★☆☆　上腕三頭筋を支配する神経を答えよ。}{橈骨神経}
+\addProblemA{★★★☆☆　鎖骨下筋を支配する神経を答えよ。}{鎖骨下筋神経}
+\addProblemA{★★☆☆☆　薄筋を支配する神経を答えよ。}{閉鎖神経}
+\addProblemA{★★★☆☆　大内転筋を支配する神経を答えよ。}{閉鎖神経、坐骨神経}
+\addProblemA{★★★☆☆　側頭筋を支配する神経を答えよ。}{深側頭神経(下顎神経)}
+\addProblemA{★★☆☆☆　長橈側手根伸筋を支配する神経を答えよ。}{橈骨神経}
+\addProblemA{★☆☆☆☆　僧帽筋を支配する神経を答えよ。}{副神経}
+\addProblemA{★☆☆☆☆　肩甲挙筋を支配する神経を答えよ。}{肩甲背神経}
+\addProblemA{★★★☆☆　前鋸筋を支配する神経を答えよ。}{長胸神経}
+\addProblemA{★★★☆☆　鎖骨下筋を支配する神経を答えよ。}{鎖骨下筋神経}
+\addProblemA{★★☆☆☆　肘筋を支配する神経を答えよ。}{橈骨神経}
+\addProblemA{★★☆☆☆　長母指外転筋を支配する神経を答えよ。}{橈骨神経}
+\addProblemA{★★☆☆☆　短母指伸筋を支配する神経を答えよ。}{橈骨神経}
+\addProblemA{★★☆☆☆　橈骨手根伸筋を支配する神経を答えよ。}{橈骨神経}
+\addProblemA{★★☆☆☆　示指伸筋を支配する神経を答えよ。}{橈骨神経}
+\addProblemA{★★☆☆☆　長母指伸筋を支配する神経を答えよ。}{橈骨神経}
+\addProblemA{★★☆☆☆　長母指屈筋を支配する神経を答えよ。}{正中神経}
+\addProblemA{★★☆☆☆　長掌筋を支配する神経を答えよ。}{正中神経}
+\addProblemA{★★☆☆☆　方形回内筋を支配する神経を答えよ。}{正中神経}
+\addProblemA{★★★★☆　深、浅指屈筋を支配する神経を答えよ。}{正中神経、尺骨神経}
+\addProblemA{★☆☆☆☆　鼻筋を支配する神経を答えよ。}{顔面神経}
+\addProblemA{★☆☆☆☆　上唇挙筋を支配する神経を答えよ。}{顔面神経}
+\addProblemA{★☆☆☆☆　小・大頬骨筋を支配する神経を答えよ。}{顔面神経}
+\addProblemA{★☆☆☆☆　口角挙筋を支配する神経を答えよ。}{顔面神経}
+\addProblemA{★★☆☆☆　膝関節筋を支配する神経を答えよ。}{大腿神経}
+\addProblemA{★☆☆☆☆　口角下制筋を支配する神経を答えよ。}{顔面神経}
+\addProblemA{★☆☆☆☆　オトガイ筋を支配する神経を答えよ。}{顔面神経}
+\addProblemA{★☆☆☆☆　表情筋を支配する神経を答えよ。}{顔面神経}
+\addProblemA{★★★☆☆　前頭筋を支配する神経を答えよ。}{顔面神経}
+\addProblemA{★☆☆☆☆　顎二腹筋を支配する神経を答えよ。}{顔面神経、顎舌骨筋神経}
+\addProblemA{★☆☆☆☆　顎舌骨筋を支配する神経を答えよ。}{顎舌骨筋神経}
+\addProblemA{★☆☆☆☆　オトガイ舌骨筋を支配する神経を答えよ。}{舌下神経}
+\addProblemA{★☆☆☆☆　甲状舌骨筋を支配する神経を答えよ。}{舌下神経、頸神経ワナ}
+\addProblemA{★★★☆☆　咬筋を支配する神経を答えよ。}{咬筋神経}
+\addProblemA{★★☆☆☆　大殿筋膜張筋を支配する神経を答えよ。}{上殿神経}
+\addProblemA{★☆☆☆☆　咀嚼筋を支配する神経を答えよ。}{下顎神経}
+\addProblemA{★☆☆☆☆　外側翼突筋を支配する神経を答えよ。}{外側翼突筋神経}
+\addProblemA{★★★☆☆　内・外肋間筋を支配する神経を答えよ。}{肋間神経}
+\addProblemA{★☆☆☆☆　肋下筋を支配する神経を答えよ。}{肋間神経}
+\addProblemA{★☆☆☆☆　胸横筋を支配する神経を答えよ。}{肋間神経}
+\addProblemA{★☆☆☆☆　肋間挙筋を支配する神経を答えよ。}{肋間神経}
+\addProblemA{★☆☆☆☆　上・下後鋸筋を支配する神経を答えよ。}{肋間神経}
+\addProblemA{★☆☆☆☆　錐体筋を支配する神経を答えよ。}{腸骨下腹神経}
+\addProblemA{★★★☆☆　腹横筋を支配する神経を答えよ。}{肋間神経、肋下神経、腸骨下腹神経}
+\addProblemA{★☆☆☆☆　短挙筋を支配する神経を答えよ。}{尺骨神経}
+\addProblemA{★☆☆☆☆　母指内転筋を支配する神経を答えよ。}{尺骨神経}
+\addProblemA{★☆☆☆☆　小指外転筋を支配する神経を答えよ。}{尺骨神経}
+\addProblemA{★★☆☆☆　小指対立筋を支配する神経を答えよ。}{尺骨神経}
+\addProblemA{★☆☆☆☆　腸骨筋を支配する神経を答えよ。}{腰神経}
+\addProblemA{★☆☆☆☆　大、小腰筋を支配する神経を答えよ。}{腰神経}
+\addProblemA{★☆☆☆☆　梨状筋を支配する神経を答えよ。}{仙骨神経叢}
+\addProblemA{★☆☆☆☆　上、下双子筋を支配する神経を答えよ。}{仙骨神経叢}
+\addProblemA{★☆☆☆☆　内閉鎖筋を支配する神経を答えよ。}{仙骨神経叢}
+\addProblemA{★☆☆☆☆　大腿方形筋を支配する神経を答えよ。}{仙骨神経叢}
+\addProblemA{★★☆☆☆　内側、中間、外側広筋を支配する神経を答えよ。}{大腿神経}
+\addProblemA{★★★☆☆　縫工筋を支配する神経を答えよ。}{大腿神経}
+\addProblemA{★★☆☆☆　恥骨筋を支配する神経を答えよ。}{大腿神経、閉鎖神経}
+\addProblemA{★★★☆☆　長・短・大内転筋を支配する神経を答えよ。}{閉鎖神経}
+\addProblemA{★★☆☆☆　外閉鎖筋を支配する神経を答えよ。}{閉鎖神経}
+\addProblemA{★☆☆☆☆　半腱様筋を支配する神経を答えよ。}{脛骨神経}
+\addProblemA{★☆☆☆☆　腓腹筋を支配する神経を答えよ。}{脛骨神経}
+\addProblemA{★★☆☆☆　第三腓骨筋を支配する神経を答えよ。}{深腓骨神経}
+\addProblemA{★☆☆☆☆　足底筋を支配する神経を答えよ。}{脛骨神経}
+\addProblemA{★☆☆☆☆　膝窩筋を支配する神経を答えよ。}{脛骨神経}
+\addProblemA{★☆☆☆☆　長趾屈筋を支配する神経を答えよ。}{脛骨神経}
+\addProblemA{★★☆☆☆　長・短母趾伸筋を支配する神経を答えよ。}{深腓骨神経}
+\addProblemA{★★☆☆☆　長・短趾伸筋を支配する神経を答えよ。}{深腓骨神経}
+\addProblemA{★★☆☆☆　母指対立筋を支配する神経を答えよ。}{正中神経}
+
+\addProblemB{★★★★★　三叉神経の英語名を答えよ。}{Trigeminal nerve}
+\addProblemB{★★★★★　大後頭神経の英語名を答えよ。}{Greater occipital nerve}
+\addProblemB{★★★★★　舌下神経の英語名を答えよ。}{Hypoglossal nerve}
+\addProblemB{★★★★★　橈骨神経の英語名を答えよ。}{Radial nerve}
+\addProblemB{★★★★★　迷走神経の英語名を答えよ。}{Vagus nerve}
+\addProblemB{★★★★★　腋窩神経の英語名を答えよ。}{Oxillary nerve}
+\addProblemB{★★★★★　肋間神経の英語名を答えよ。}{Intercostal nerve}
+\addProblemB{★★★★★　閉鎖神経の英語名を答えよ。}{Obturator nerve}
+\addProblemB{★★★★★　顔面神経の英語名を答えよ。}{Facial nerve}
+\addProblemB{★★★★★　尺骨神経の英語名を答えよ。}{Ulnar nerve}
+\addProblemB{★★★★★　舌咽神経の英語名を答えよ。}{Glossopharyngeal nerve}
+\addProblemB{★★★★★　視神経の英語名を答えよ。}{Optic nerve}
+\addProblemB{★★★★★　腕神経叢の英語名を答えよ。}{Brachial plexus}
+\addProblemB{★★★★★　頸神経叢の英語名を答えよ。}{Cervical plexus}
+\addProblemB{★★★★★　腰神経叢の英語名を答えよ。}{Lumbar plexus}
+\addProblemB{★★★★★　仙骨神経叢の英語名を答えよ。}{Sacral plexus}
+\addProblemB{★★★★★　骨盤神経叢の英語名を答えよ。}{Pelvic plexus}
+\addProblemB{★★★★★　頸神経ワナの英語名を答えよ。}{Ansa cervicalis}
+\addProblemB{★★★★★　交感神経幹の英語名を答えよ。}{Sympathetic nerve trunk}
+\addProblemB{★★★★★　小円筋の英語名を答えよ。}{Tres minor muscle}
+
+
+\newcommand{\page}{
+\randomshuffle[name=shuffled]{1}{\problemAnum}
+\randomshuffle[name=shuffled]{1}{\problemBnum}
+【問】
+\begin{enumerate}
+  \setlength{\itemsep}{10mm}
+  \item \printProblemA{1}
+  \item \printProblemA{2}
+  \item \printProblemA{3}
+  \item \printProblemA{4}
+  \item \printProblemA{5}
+  \item \printProblemA{6}
+  \item \printProblemA{7}
+  \item \printProblemA{8}
+  \item \printProblemA{9}
+  \item \printProblemA{10}
+  \item \printProblemB{1}
+  \item \printProblemB{2}
+\end{enumerate}
+\vfill
+【答】\\
+\begin{inparaenum}[1:]
+\item \printAnswerA{1}
+\item \printAnswerA{2}
+\item \printAnswerA{3}
+\item \printAnswerA{4}
+\item \printAnswerA{5}
+\item \printAnswerA{6}
+\item \printAnswerA{7}
+\item \printAnswerA{8}
+\item \printAnswerA{9}
+\item \printAnswerA{10}
+\item \printAnswerB{1}
+\item \printAnswerB{2}
+\end{inparaenum}
+}
+\begin{document}
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\end{document}
