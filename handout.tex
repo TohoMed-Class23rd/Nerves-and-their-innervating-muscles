@@ -32,10 +32,10 @@
   \@namedef{answerB\the\problemBnum}{#2}%
 }
 
-\def\printProblemA#1{\@nameuse{problemA\shuffled{#1}}}
-\def\printAnswerA#1{\@nameuse{answerA\shuffled{#1}}}
-\def\printProblemB#1{\@nameuse{problemB\shuffled{#1}}}
-\def\printAnswerB#1{\@nameuse{answerB\shuffled{#1}}}
+\def\printProblemA#1{\@nameuse{problemA\shuffledA{#1}}}
+\def\printAnswerA#1{\@nameuse{answerA\shuffledA{#1}}}
+\def\printProblemB#1{\@nameuse{problemB\shuffledB{#1}}}
+\def\printAnswerB#1{\@nameuse{answerB\shuffledB{#1}}}
 
 \makeatother
 
@@ -191,8 +191,8 @@
 
 
 \newcommand{\page}{
-\randomshuffle[name=shuffled]{1}{\problemAnum}
-\randomshuffle[name=shuffled]{1}{\problemBnum}
+\randomshuffle[name=shuffledA]{1}{\problemAnum}
+\randomshuffle[name=shuffledB]{1}{\problemBnum}
 【問】
 \begin{enumerate}
   \setlength{\itemsep}{10mm}
@@ -227,6 +227,56 @@
 \end{inparaenum}
 }
 \begin{document}
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
+\page \newpage
 \page \newpage
 \page \newpage
 \page \newpage
